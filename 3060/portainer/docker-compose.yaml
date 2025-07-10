@@ -1,0 +1,17 @@
+name: portainer
+
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:lts
+    volumes:
+      - portainer-data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 8000:8000
+      - 9443:9443
+    restart: always
+
+volumes:
+  portainer-data:
