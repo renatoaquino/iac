@@ -150,10 +150,10 @@ networks:
     name: immich_default
   exposed:
     name: immich_exposed
-    driver: ipvlan
+    driver: ipvlan  
     ipam:
       driver: default
-      config:
+      config: 
         - subnet: "192.168.22.0/23"
           gateway: "192.168.22.1"
     driver_opts:
