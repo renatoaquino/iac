@@ -18,7 +18,7 @@ services:
       # Uncomment this if IPv6 is not enabled on your host
       # DISABLE_IPV6: 'true'
     networks:
-      default:
+      immich_exposed:
           ipv4_address: 192.168.23.101
 
     volumes:
@@ -34,14 +34,14 @@ volumes:
       o: bind
       device: /mnt/nvme/nginx/data
 
-networks:
-  default:
-    name: external
-    driver: ipvlan
-    ipam:
-      driver: default
-      config:
-        - subnet: "192.168.22.0/23"
-          gateway: "192.168.22.1"
-    driver_opts:
-      parent: enp1s0
+# networks:
+#   default:
+#     name: external
+#     driver: ipvlan
+#     ipam:
+#       driver: default
+#       config:
+#         - subnet: "192.168.22.0/23"
+#           gateway: "192.168.22.1"
+#     driver_opts:
+#       parent: enp1s0
