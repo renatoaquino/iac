@@ -26,7 +26,6 @@ services:
       - /etc/letsencrypt:/etc/letsencrypt
 
 volumes:
-  meilisearch:
   data:
     driver: local
     driver_opts:
@@ -45,3 +44,5 @@ networks:
           gateway: "192.168.22.1"
     driver_opts:
       parent: enp1s0
+  immich_default:
+    external: true
