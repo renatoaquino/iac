@@ -7,7 +7,8 @@ services:
       - USER_GID=1000
     restart: always
     networks:
-      - external
+      default:
+          ipv4_address: 192.168.23.102
     volumes:
       - /mnt/nvme/forgejo:/forgejo
       - /mnt/nvme/forgejo/conf/app.ini:/etc/forgejo/app.ini:ro
