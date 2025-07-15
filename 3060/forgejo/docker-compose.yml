@@ -11,7 +11,7 @@ services:
           ipv4_address: 192.168.23.102
     volumes:
       - /mnt/nvme/forgejo:/forgejo
-      - /mnt/nvme/forgejo/conf/app.ini:/etc/forgejo/app.ini:ro
+      - /mnt/nvme/forgejo/conf/app.ini:/data/gitea/conf/app.ini:ro
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
