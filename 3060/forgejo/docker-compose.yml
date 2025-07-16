@@ -17,5 +17,5 @@ services:
       - '22:22'
 networks:
   default:
-    name: default
+    name: bridge
     external: true

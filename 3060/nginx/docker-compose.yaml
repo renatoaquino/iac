@@ -47,5 +47,5 @@ networks:
   immich_default:
     external: true
   default:
-    name: default
+    name: bridge
     external: true
