@@ -24,6 +24,8 @@ services:
   chrome:
     image: gcr.io/zenika-hub/alpine-chrome:123
     restart: unless-stopped
+    networks:
+      default:    
     command:
       - --no-sandbox
       - --disable-gpu
@@ -34,6 +36,8 @@ services:
   meilisearch:
     image: getmeili/meilisearch:v1.13.3
     restart: unless-stopped
+    networks:
+      default:    
     env_file:
       - .env
     environment:
