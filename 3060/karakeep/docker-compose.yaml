@@ -2,6 +2,8 @@ services:
   web:
     image: ghcr.io/karakeep-app/karakeep:${KARAKEEP_VERSION:-release}
     restart: unless-stopped
+    networks:
+      default:    
     volumes:
       # By default, the data is stored in a docker volume called "data".
       # If you want to mount a custom directory, change the volume mapping to:
@@ -47,3 +49,8 @@ volumes:
       type: none
       o: bind
       device: /mnt/nvme/karakeep/data
+
+networks:
+  default:
+    name: default
+    external: true      
