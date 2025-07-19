@@ -19,8 +19,9 @@ services:
       # DISABLE_IPV6: 'true'
     networks:
       default:
+
       external:
-          ipv4_address: 192.168.23.101
+          ipv4_address: 192.168.23.100
 
     volumes:
       - data:/data
