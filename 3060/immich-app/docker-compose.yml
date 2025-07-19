@@ -138,16 +138,17 @@ volumes:
   prometheus-data:
   grafana-data:
   # If it fails to mount on reboot run "systemctl enable systemd-networkd-wait-online.service"
-  certs:
-    driver: local
-    driver_opts:
-      type: nfs
-      o: addr=192.168.22.19,ro,nfsvers=4,nolock,soft
-      device: :/secrets/certificates
+  # certs:
+  #   driver: local
+  #   driver_opts:
+  #     type: nfs
+  #     o: addr=192.168.22.19,ro,nfsvers=4,nolock,soft
+  #     device: :/secrets/certificates
 
 networks:
   default:
-    name: immich_default
+    name: aquinet
+    external: true
   # exposed:
   #   name: immich_exposed
   #   driver: ipvlan  
