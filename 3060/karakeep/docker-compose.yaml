@@ -56,5 +56,5 @@ volumes:
 
 networks:
   default:
-    name: bridge
+    name: aquinet
     external: true      

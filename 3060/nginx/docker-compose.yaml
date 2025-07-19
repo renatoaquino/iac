@@ -20,6 +20,7 @@ services:
     networks:
       external:
           ipv4_address: 192.168.23.101
+      default:
 
     volumes:
       - data:/data
@@ -47,5 +48,5 @@ networks:
   immich_default:
     external: true
   default:
-    name: bridge
+    name: aquinet
     external: true
