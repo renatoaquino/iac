@@ -2,6 +2,7 @@ services:
   web:
     image: ghcr.io/karakeep-app/karakeep:${KARAKEEP_VERSION:-release}
     restart: unless-stopped
+    container_name: karakeep
     networks:
       default:    
     volumes:
