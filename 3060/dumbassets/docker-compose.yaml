@@ -4,7 +4,7 @@ services:
     image: dumbwareio/dumbassets:latest
     restart: unless-stopped
     ports: 
-      - ${DUMBASSETS_PORT:-3000}:3000
+      - ${DUMBASSETS_PORT:-3001}:3001
     volumes:
       - ${DUMBASSETS_DATA_PATH:-./data}:/app/data
     environment:
