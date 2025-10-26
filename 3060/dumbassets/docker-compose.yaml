@@ -13,7 +13,12 @@ services:
       SITE_TITLE: DumbAssets
       BASE_URL: https://da.aquino.network
       DUMBASSETS_PIN: 8307
-      ALLOWED_ORIGINS: *
+      ALLOWED_ORIGINS: '*'
       CURRENCY_CODE: ${DUMBASSETS_CURRENCY_CODE:-BRL}
       CURRENCY_LOCALE: ${DUMBASSETS_CURRENCY_LOCALE:-pt-BR}
       TZ: America/Sao_Paulo
+
+networks:
+  default:
+    name: aquinet
+    external: true
