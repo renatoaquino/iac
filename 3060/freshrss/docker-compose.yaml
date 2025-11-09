@@ -27,3 +27,7 @@ services:
     #   start_interval: 11s
     #   interval: 75s
     #   retries: 3
+networks:
+  default:
+    name: aquinet
+    external: true    
